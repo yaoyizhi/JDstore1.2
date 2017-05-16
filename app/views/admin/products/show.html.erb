@@ -1,2 +1,17 @@
-<%= link_to (product.title)%>
-<%= product.price %>
+<h2><%= @product.title %></h2>
+<div >
+    <% if @product.image.present? %>
+        <%= image_tag(@product.image.thumb.url)%>
+    <% else %>
+        <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+    <% end %>
+</div>
+<div style="height:100px;">
+    <%= @product.description%>
+</div>
+<div >
+    数量：  <%= @product.quantity%>
+</div>
+<div >
+    <%= @product.price %>
+</div>
