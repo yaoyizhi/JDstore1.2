@@ -28,7 +28,7 @@
                             <%= cartitem.product.price %>
                         </td>
                         <td>
-                            <%= cartitem.product.quantity%>
+                            <%= cartitem.quantity%>
                         </td>
                     </tr>
                 <% end %>
@@ -36,7 +36,7 @@
         </table>
         <br>
         <div class="pull-right">
-            总计
+            总计<%= render_cart_total_price(current_cart) %>¥
         </div>
         <hr>
         <div class="pull-right">
