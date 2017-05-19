@@ -17,5 +17,9 @@ Rails.application.routes.draw do
         end
     end
     resources :cartitems
+
     resources :orders
+    namespace :account do
+        resources :orders
+    end
 end
