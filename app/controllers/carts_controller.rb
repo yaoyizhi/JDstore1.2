@@ -1,8 +1,4 @@
 class CartsController < ApplicationController
-    def index
-        @carts = Cart.all
-    end
-
     def clean
         current_cart.clean!
         flash[:warning] = '已清空购物车'

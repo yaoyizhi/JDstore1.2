@@ -8,15 +8,17 @@ Rails.application.routes.draw do
     end
     namespace :admin do
         resources :products
+        resources :orders
     end
     root 'products#index'
+
     resources :carts do
         collection do
             delete :clean
             post :checkout
         end
     end
-    resources :cartitems
+    resources :cart_items
 
     resources :orders do
         member do

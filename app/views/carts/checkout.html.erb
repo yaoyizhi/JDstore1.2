@@ -10,13 +10,13 @@
                 </tr>
             </thead>
             <tbody>
-                <% current_cart.cartitems.each do |cartitem| %>
+                <% current_cart.cart_items.each do |cart_item| %>
                     <tr>
                         <td>
-                            <%= link_to(cartitem.product.title, product_path(cartitem.product))%>
+                            <%= link_to(cart_item.product.title, product_path(cart_item.product))%>
                         </td>
-                        <td><%= cartitem.product.price%></td>
-                        <td><%= cartitem.quantity%></td>
+                        <td><%= cart_item.product.price%></td>
+                        <td><%= cart_item.quantity%></td>
                     </tr>
                 <% end %>
             </tbody>

@@ -10,12 +10,12 @@ class OrdersController < ApplicationController
         @order.total = current_cart.total_price
 
         if @order.save
-            current_cart.cartitems.each do |cartitem|
+            current_cart.cart_items.each do |cart_item|
                 productlist = Productlist.new
                 productlist.order = @order
-                productlist.product_name = cartitem.product.title
-                productlist.product_price = cartitem.product.price
-                productlist.quantity = cartitem.quantity
+                productlist.product_name = cart_item.product.title
+                productlist.product_price = cart_item.product.price
+                productlist.quantity = cart_item.quantity
                 productlist.save
             end
             current_cart.clean!
@@ -29,14 +29,14 @@ class OrdersController < ApplicationController
     def pay_with_alipay
         @order = Order.find_by_token(params[:id])
         @order.set_payment_with!('alipay')
-        @order.pay!
+        @order.make_payment!
         redirect_to order_path(@order.token), notice: '使用支付宝已成功付款'
     end
 
     def pay_with_wechat
         @order = Order.find_by_token(params[:id])
         @order.set_payment_with!('wechat')
-        @order.pay!
+        @order.make_payment!
         redirect_to order_path(@order.token), notice: '使用微信已成功付款'
     end
 
