@@ -1,1 +1,45 @@
-<h1>Hello World!</h1>
+<!--New-Zoom-Crousal-by Sangrai-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+<div class="container-fluid">
+    <div class="row">
+        <div id="sg-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1" class=""></li>
+                <li data-target="#carousel" data-slide-to="2" class=""></li>
+                <li data-target="#carousel" data-slide-to="3" class=""></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner carousel-zoom">
+                <div class="item active"><img class="img-responsive" src="http://oqr2tkodq.bkt.clouddn.com/header.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1  data-animation="animated zoomInLeft" class="cap-txt ">信息共享 互帮互助 </h1>
+                        <p data-animation="animated bounceInDown">希望借由这个网站，让大家找到邻里间可靠的资源。</p>
+                    </div>
+                </div>
+                <div class="item"><img class="img-responsive" src="http://oqr2tkodq.bkt.clouddn.com/pic-2.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1 data-animation="animated zoomInLeft" class="cap-txt">有时候我们三头六臂</h1>
+                        <p data-animation="animated bounceInDown">忙得团团转</p>
+                    </div>
+                </div>
+                <div class="item"><img class="img-responsive" src="http://oqr2tkodq.bkt.clouddn.com/pic-3.jpg" alt="">
+                    <div class="carousel-caption animated slideInLeft">
+                        <h1 data-animation="animated zoomInLeft" class="cap-txt">希望借这个平台</h1>
+                        <p data-animation="animated bounceInDown">让我们 照顾好家人</p>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#sg-carousel" data-slide="prev">‹</a>
+                <a class="carousel-control right" href="#sg-carousel" data-slide="next">›</a>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-4">
+                <%= link_to("进入信息商品页",products_path, class: "go-to-products")%>
+            </div>
+        </div>
+    </div>
