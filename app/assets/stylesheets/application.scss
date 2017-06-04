@@ -17,8 +17,18 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.f30 {
-  font-size: 30px;
+//----------footer---------//
+footer {
+  color: white;
+}
+
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #333;
+}
+
+.navbar-brand a {
+  color: #f44336;
 }
 
 .button {
@@ -186,19 +196,6 @@
   color: #C81623;
 
   /*鼠标一上去的时候，字体变成红色*/
-}
-
-/*排序*/
-.orderList {
-  margin: 20px auto;
-  width: 1200px;
-  overflow: hidden;
-}
-
-.orderList-item {
-  float: left;
-  width: 108px;
-  height: 42px;
 }
 
 /*商品列表*/
@@ -588,5 +585,68 @@ a:-webkit-any-link {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+/*===== Service 首页-服务优势 =====*/
+.service-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 25px 62.5px 50px 62.5px;
+
+  //区块间隔
+
+  /* 图片 */
+  img {
+    width: 100px;
+  }
+
+  /*===== 内容区块 =====*/
+  .box {
+    margin: 0 25px 0 25px;
+
+    /* 标题 */
+    h3 {
+      font-size: 18px;
+    }
+
+    /* 内文 */
+    p {
+      color: #666;
+      line-height: 24px;
+      margin-top: 25px;
+      text-align: justify;
+    }
+  }
+}
+
+/*===== Categories 首页-商品分类 =====*/
+.categories-box {
+  /* 区块 */
+  background-color: #fff;
+  text-align: center;
+
+  /* 图片 */
+  img {
+    width: 300px;
+  }
+
+  /*===== Content 分类內容 =====*/
+  .category-content {
+    padding: 50px 0 0 0;
+
+    /* 标题 */
+    h3 {
+      padding: 20px 0 20px 0;
+      font-size: 18px;
+    }
+
+    /* 内文 */
+    p {
+      padding: 0 62.5px 50px 62.5px;
+      text-align: justify;
+      color: #666;
+    }
   }
 }
