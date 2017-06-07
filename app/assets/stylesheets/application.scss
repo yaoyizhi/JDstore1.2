@@ -17,6 +17,22 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.service-box {
+  /* 副标题 */
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* 短分隔线 */
+  .short-line {
+    background: #0070DE;
+    margin: 15px auto 30px auto;
+    width: 150px;
+    height: 1.5px;
+  }
+}
+
 //----------footer---------//
 footer {
   color: white;
@@ -616,7 +632,7 @@ a:-webkit-any-link {
       color: #666;
       line-height: 24px;
       margin-top: 25px;
-      text-align: justify;
+      text-align: center;
     }
   }
 }
@@ -629,7 +645,7 @@ a:-webkit-any-link {
 
   /* 图片 */
   img {
-    width: 300px;
+    width: 380px;
   }
 
   /*===== Content 分类內容 =====*/
@@ -645,7 +661,7 @@ a:-webkit-any-link {
     /* 内文 */
     p {
       padding: 0 62.5px 50px 62.5px;
-      text-align: justify;
+      text-align: center;
       color: #666;
     }
   }
