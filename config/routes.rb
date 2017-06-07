@@ -11,6 +11,7 @@ Rails.application.routes.draw do
         end
     end
     namespace :admin do
+        resources :informations
         resources :products
         resources :orders do
             member do
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
         end
     end
     root 'welcome#index'
-
+    resources :informations
     resources :carts do
         collection do
             delete :clean

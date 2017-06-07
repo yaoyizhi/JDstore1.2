@@ -1,0 +1,19 @@
+<div class="table">
+    <div class="row">
+        <div class="col-md-8">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>发布的信息</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @informations.each do |information|%>
+                    <tr>
+                        <td><%= information.title %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </div>
+    </div>
+</div>

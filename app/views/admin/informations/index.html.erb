@@ -1,0 +1,25 @@
+<h3>Information List</h3>
+<%= link_to("Add new information", new_admin_information_path, class: "btn btn-default pull-right")%>
+<div class="table">
+    <div class="row">
+        <div class="col-md-8">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>发布的信息</th>
+                    <th>管理项</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @informations.each do |information|%>
+                    <tr>
+                        <td><%= information.title %></td>
+                    </tr>
+                    <tr>
+                        <td><%=link_to("delete",admin_information_path(information),method: :delete, :data =>{:confirm =>"Are you sure?"} )%></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </div>
+    </div>
+</div>
