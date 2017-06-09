@@ -8,4 +8,7 @@ class User < ApplicationRecord
         is_admin
     end
     has_many :orders
+
+    has_many :posts
+    has_many :infos
 end

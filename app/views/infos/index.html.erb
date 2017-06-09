@@ -1,0 +1,19 @@
+<h2>信息列表</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>发布的信息</th>
+            <th>更新时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @infos.each do |info|%>
+            <tr>
+                <td><%= link_to(info.id, info_path(info))%></td>
+                <td><%= link_to(info.title , info_path(info))%></td>
+                <td><%= info.created_at %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

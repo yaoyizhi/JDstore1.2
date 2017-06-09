@@ -1,0 +1,20 @@
+<h2>信息列表</h2>
+<%= link_to("Add new info", new_admin_info_path, class: "btn btn-default pull-right")%>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>发布的信息</th>
+            <th>更新时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @infos.each do |info|%>
+            <tr>
+                <td><%= link_to(info.id, admin_info_path(info))%></td>
+                <td><%= link_to(info.title, admin_info_path(info) )%></td>
+                <td><%= info.created_at %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

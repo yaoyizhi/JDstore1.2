@@ -28,3 +28,17 @@ products_info.each do |info|
 
     )
 end
+
+infos_info = [
+    { title: '找阿姨做晚饭', description: '找阿姨做晚饭，下午2:30-4:00，50块一顿' },
+    { title: '儿童画本借阅互换阅读', description: '神奇校车，小熊维尼，小兔彼得' },
+    { title: '业委会选举信息', description: '有你支持的吗？' },
+    { title: '本周末奥森公园游', description: '有一起的吗？' }
+]
+
+infos_info.each do |info|
+    Info.create!(
+        title: info[:title],
+        description: info[:description]
+    )
+end

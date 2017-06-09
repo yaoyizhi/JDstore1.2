@@ -1,0 +1,23 @@
+<%=link_to("回复留言", new_info_post_path(@info,@post), class: "btn btn-pullright btn_success")%>
+<table class="table ">
+    <thead>
+        <tr>
+            <td>
+                <%= @info.title%>
+            </td>
+        </tr>
+        <tr>
+            <td><%= @info.description%></td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @posts.each do |post|%>
+            <tr>
+                <td><%= post.content %></td>
+                <hr>
+                <td><%= post.user.email%></td>
+                <td><%= post.created_at%></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
