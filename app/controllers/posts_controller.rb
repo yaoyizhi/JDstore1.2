@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_action :authenticate_user!
     def new
         @info = Info.find(params[:info_id])
         @post = Post.new

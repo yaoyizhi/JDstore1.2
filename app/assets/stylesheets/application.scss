@@ -17,6 +17,9 @@
 @import "bootstrap";
 @import "font-awesome";
 
+@import "bootstrap-material-design";
+@import "ripples";
+
 .service-box {
   /* 副标题 */
   h2 {
@@ -475,10 +478,24 @@ a:-webkit-any-link {
 }
 
 .carousel-caption > a {
-  text-transform: uppercase;
-  color: #fff;
-  background: #041132;
-  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  min-width: 180px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  font-size: 25px;
+
+  &.btn-red {
+    background-color: #FF3361;
+  }
+
+  &.btn-brown {
+    background-color: #FFB833;
+  }
+
+  &.btn-green {
+    background-color: #1B74CD;
+  }
 }
 
 .button--tamaya {
@@ -646,6 +663,7 @@ a:-webkit-any-link {
   /* 图片 */
   img {
     width: 380px;
+    box-shadow: 0px 0px 30px #F6ECB2;
   }
 
   /*===== Content 分类內容 =====*/
@@ -656,6 +674,7 @@ a:-webkit-any-link {
     h3 {
       padding: 20px 0 20px 0;
       font-size: 18px;
+      margin-top: 30;
     }
 
     /* 内文 */
@@ -663,6 +682,15 @@ a:-webkit-any-link {
       padding: 0 62.5px 50px 62.5px;
       text-align: center;
       color: #666;
+    }
+
+    button {
+      font-color: #666;
+      font-size: 18px;
+      margin: 30;
+      width: 120;
+      height: 30;
+      background-color: #FFCA33;
     }
   }
 }
